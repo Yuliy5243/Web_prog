@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Новости без перезагрузки</title>
+    <script src="news-app.js" defer></script>
+</head>
+<body>
+<h1>Новости</h1>
+<!-- Блок со статистикой -->
+<p id="stats" style="color: #555; font-size: 0.9em;">Загрузка...</p>
+
+<!-- Поле для поиска -->
+<input type="text" id="search-input" placeholder="Поиск по заголовку..." style="width: 100%; padding: 8px; margin-bottom: 15px; box-sizing: border-box;">
+
+
+
+<form id="news-form">
+    <p><label>Заголовок <input name="title" maxlength="255" required></label></p>
+    <p><label>Текст <textarea name="content" maxlength="10000" required></textarea></label></p>
+    <button type="submit">Добавить</button>
+</form>
+<p id="message" role="status" aria-live="polite"></p>
+<button id="reload" type="button">Обновить список</button>
+<ul id="news-list"></ul>
+</body>
+</html>
